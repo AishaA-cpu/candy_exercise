@@ -65,11 +65,9 @@ def get_friends_who_like_specific_candy(data, candy_name):
 
 def create_candy_set(data):
     
-    combined_list = []
+    candy_set = set()
 
     for key,value in data.items():
-        combined_list += value
-
-    candy_set = set(combined_list)
+        candy_set.update(value)
 
     return candy_set
